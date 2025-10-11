@@ -113,19 +113,21 @@ def specificPass(platform):
         print("[ERROR] No password file found.")
         return
 
-    found = False
+    table = []
     with open("password.csv", "r") as f2:
         reader = csv.DictReader(f2)
         for row in reader:
             if row["Platform"].lower() == platform.lower():
-                print({
-                    "Date": row["Date"],
-                    "Platform": row["Platform"],
-                    "E-Mail": row["E-Mail"],
-                    "Password": decrypt_password(row["Password"])
-                })
-                found = True
-    if not found:
+                table.append([
+                    row["Date"],
+                    row["Platform"],
+                    row["E-Mail"],
+                    decrypt_password(row["Password"])
+                ])
+
+    if table:
+        print(tabulate(table, headers=["Date", "Platform", "E-Mail", "Password"], tablefmt="grid"))
+    else:
         print(f"[INFO] No entries found for '{platform}'.")
 
 # -------------------- Async Password Display --------------------
