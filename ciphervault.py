@@ -35,7 +35,7 @@ def encrypt_password(password):
 def decrypt_password(enc_password):
     return cipher.decrypt(enc_password.encode()).decode()
 
-# -------------------- Password Generation --------------------
+
 def create_pass(length=15, use_special=True):
     lowercase = string.ascii_lowercase
     uppercase = string.ascii_uppercase
@@ -63,7 +63,7 @@ def create_pass(length=15, use_special=True):
     pyperclip.copy(final_password)
     return final_password
 
-# -------------------- Store Password --------------------
+
 def store_pass(passw):
     date = datetime.date.today()
     Platform = input("Enter Platform: ").strip()
@@ -103,11 +103,12 @@ def store_pass(passw):
         writer.writeheader()
         writer.writerows(rows)
 
-# -------------------- Use Special Characters --------------------
+
 def use_specials(specs):
     return specs.lower() in ["yes", "y", "true"]
 
-# -------------------- View Specific Platform --------------------
+
+
 def specificPass(platform):
     if not os.path.exists("password.csv"):
         print("[ERROR] No password file found.")
@@ -130,7 +131,8 @@ def specificPass(platform):
     else:
         print(f"[INFO] No entries found for '{platform}'.")
 
-# -------------------- Async Password Display --------------------
+
+
 async def delay_timer(passs):
     print("Generating Password...")
     await asyncio.sleep(2)
@@ -164,7 +166,9 @@ async def delay_timer(passs):
 async def delayy(passs):
     await delay_timer(passs)
 
-# -------------------- View All Passwords --------------------
+
+
+
 def view_pass():
     if not os.path.exists("password.csv"):
         print("[ERROR] No password file found.")
@@ -182,7 +186,8 @@ def view_pass():
             ])
     print(tabulate(table, headers=["Date", "Platform", "E-Mail", "Password"], tablefmt="grid"))
 
-# -------------------- Main Menu --------------------
+
+
 def main():
     a = int(input('''What you wanna do today?
 1) Generate a new Password
@@ -207,6 +212,7 @@ def main():
     else:
         print("Invalid option.")
 
-# -------------------- Run --------------------
+
+
 if __name__ == "__main__":
     main()
