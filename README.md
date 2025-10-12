@@ -153,7 +153,8 @@ To contribute code, please follow this standard workflow:
 
 3. Create a new, descriptive branch for your feature or fix:
 ```bash
-   git checkout -b feature/your-awesome-feature```
+   git checkout -b feature/your-awesome-feature
+   ```
 
 4. Make your changes.
 
@@ -161,11 +162,13 @@ To contribute code, please follow this standard workflow:
 
 6. Commit your changes with clear, concise messages. We recommend following the Conventional Commits specification (e.g., feat: added new security check).
 ```bash
-   git commit -m "feat: add new security check" ```
+   git commit -m "feat: add new security check"
+```
 
 7. Push your branch to your fork on GitHub.
 ```bash
-   git push origin feature/your-awesome-feature ```
+   git push origin feature/your-awesome-feature 
+```
 
 8. Open a Pull Request (PR) targeting the main branch of the original CipherVault repository.
 
