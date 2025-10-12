@@ -114,7 +114,7 @@ This prevents confusion and keeps the workflow clean.
 - Use strong master passwords if you plan to add one in future versions.
 
 
-### # 🤝 Contributing to CipherVault
+### 🤝 Contributing to CipherVault
 
 We’re thrilled that you’re considering contributing to **CipherVault**!  
 Whether it’s reporting a bug, suggesting a feature, or writing code — your efforts are highly valued.
