@@ -148,7 +148,8 @@ To contribute code, please follow this standard workflow:
 
 2. **Clone** your forked repository locally:
    ```bash
-   git clone https://github.com/ApurveKaranwal/CipherVault.git```
+   git clone https://github.com/ApurveKaranwal/CipherVault.git
+   ```
    
 
 3. Create a new, descriptive branch for your feature or fix:
