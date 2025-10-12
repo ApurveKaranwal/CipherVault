@@ -114,12 +114,60 @@ This prevents confusion and keeps the workflow clean.
 - Use strong master passwords if you plan to add one in future versions.
 
 
-### 🤝 Contributing
+### # 🤝 Contributing to CipherVault
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+We’re thrilled that you’re considering contributing to **CipherVault**!  
+Whether it’s reporting a bug, suggesting a feature, or writing code — your efforts are highly valued.
 
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
+---
+
+## 🐛 Reporting Bugs
+
+If you find a bug, please help us by creating a detailed issue.  
+When submitting a bug report, include:
+
+- A clear, descriptive title.  
+- The exact steps to reproduce the issue.  
+- The expected behavior and the actual behavior.  
+- Your Python version and operating system.
+
+---
+
+## ✨ Suggesting Features
+
+If you have an idea for a new feature or enhancement, feel free to open an issue to discuss it.  
+This helps ensure that we’re all aligned before you spend time writing code.
+
+---
+
+## 🛠 Submitting Code Changes
+
+To contribute code, please follow this standard workflow:
+
+1. **Fork** the repository on GitHub.
+
+2. **Clone** your forked repository locally:
+   ```bash
+   git clone https://github.com/ApurveKaranwal/CipherVault.git```
+   
+
+3. Create a new, descriptive branch for your feature or fix:
+```bash
+   git checkout -b feature/your-awesome-feature```
+
+4. Make your changes.
+
+5. Ensure your code adheres to standard Python formatting (e.g., using a linter like Black).
+
+6. Commit your changes with clear, concise messages. We recommend following the Conventional Commits specification (e.g., feat: added new security check).
+```bash
+   git commit -m "feat: add new security check" ```
+
+7. Push your branch to your fork on GitHub.
+```bash
+   git push origin feature/your-awesome-feature ```
+
+8. Open a Pull Request (PR) targeting the main branch of the original CipherVault repository.
+
+We appreciate clean, well-documented code and will review your PR as quickly as possible!
+Thank you for helping improve CipherVault ❤️
