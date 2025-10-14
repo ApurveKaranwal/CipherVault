@@ -14,7 +14,6 @@ from cryptography.fernet import Fernet
 from tabulate import tabulate
 import re
 
-# -------------------- Encryption Setup --------------------
 KEY_FILE = "secret.key"
 
 def load_key():
