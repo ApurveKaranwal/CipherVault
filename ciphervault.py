@@ -12,6 +12,7 @@ import string
 import os
 from cryptography.fernet import Fernet
 from tabulate import tabulate
+import re
 
 # -------------------- Encryption Setup --------------------
 KEY_FILE = "secret.key"
@@ -67,7 +68,19 @@ def create_pass(length=15, use_special=True):
 def store_pass(passw):
     date = datetime.date.today()
     Platform = input("Enter Platform: ").strip()
-    Email = input("Enter E-Mail: ").strip()
+    Email=""
+
+    while True:
+        mail = input("Enter E-Mail: ").strip()
+        matches = re.search(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$", mail, re.IGNORECASE)
+
+        if matches:
+            Email = mail
+            print("Valid E-Mail:", Email)
+            break
+        else:
+            print("Enter a valid E-Mail.\n")
+
 
     filename = "password.csv"
     fieldnames = ["Date", "Platform", "E-Mail", "Password"]
