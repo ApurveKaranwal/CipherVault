@@ -97,7 +97,7 @@ def store_pass(passw):
             row["Password"] = enc_pass
             row["Date"] = str(date)
             updated = True
-            print(f"[UPDATED] Password for {Platform} ({Email}) has been updated.")
+            print(f"[UPDATED] Password for {Platform} ({mail}) has been updated.")
             break
 
     if not updated:
@@ -107,7 +107,7 @@ def store_pass(passw):
             "E-Mail": Email,
             "Password": enc_pass
         })
-        print(f"[NEW] Added new entry for {Platform} ({Email}).")
+        print(f"[NEW] Added new entry for {Platform} ({mail}).")
 
     with open(filename, "w", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=fieldnames)
