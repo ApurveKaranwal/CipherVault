@@ -12,7 +12,7 @@ import string
 import os
 from cryptography.fernet import Fernet
 from tabulate import tabulate
-import re
+import validators
 
 KEY_FILE = "secret.key"
 
@@ -71,12 +71,11 @@ def store_pass(passw):
 
     while True:
         mail = input("Enter E-Mail: ").strip()
-        matches = re.search(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$", mail, re.IGNORECASE)
-
-        if matches:
-            Email = mail
-            print("Valid E-Mail:", Email)
+        #matches = re.search(r"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$", mail, re.IGNORECASE)
+        if validators.email(mail):
+            print("Valid")
             break
+
         else:
             print("Enter a valid E-Mail.\n")
 
